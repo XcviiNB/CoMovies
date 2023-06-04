@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.overlay {
+    background-color: #222;
+    opacity: 0.85;
+    position: fixed; /* Change 'absolute' to 'fixed' */
+    top: 0;
+    left: 0;
+    right: 0; /* Add 'right' property to cover the entire width */
+    bottom: 0; /* Add 'bottom' property to cover the entire height */
+    z-index: 9999; /* Ensure the overlay is above other elements */
+}
+
+.dialog-wrapper {
+    position: fixed; /* Change 'absolute' to 'fixed' */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex; /* Change 'flex' to 'flex' */
+    justify-content: center; /* Change 'justify-center' to 'center' */
+    align-items: center; /* Change 'items-center' to 'center' */
+    z-index: 10000; /* Ensure the dialog wrapper is above the overlay */
+}
+
+.dialog-wrapper .dialog {
+    background-color: #70a5ff;
+    padding: 4rem; /* Change 'p-4' to '4rem' or adjust as needed */
+    border-radius: 0.5rem; /* Change 'rounded-lg' to '0.5rem' or adjust as needed */
+    min-width: 600px;
+}
